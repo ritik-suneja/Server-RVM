@@ -8,7 +8,7 @@ server.use(middlewares);
 server.use(cors()); // Use CORS middleware
 server.use(router);
 
-const port = 5001;
+const port = process.env.PORT || 5001;
 server.listen(port, () => {
   console.log(`JSON Server is running on port ${port}`);
 });
